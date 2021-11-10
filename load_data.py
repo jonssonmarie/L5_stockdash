@@ -63,3 +63,4 @@ class StockDataLocal:
             stock_df_list.append(stock)
 
         return stock_df_list
+        

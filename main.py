@@ -1,11 +1,12 @@
 from dash import dcc, html
 from dash.dependencies import Output, Input
 import dash
-from load_data import StockDataLocal
-import plotly_express as px
-from time_filtering import filter_time
 import pandas as pd
 import dash_bootstrap_components as dbc
+import plotly_express as px
+
+from time_filtering import filter_time
+from load_data import StockDataLocal
 
 # module variables
 
@@ -37,7 +38,6 @@ app = dash.Dash(__name__, external_stylesheets=stylesheets,
                 meta_tags=[dict(name="viewport", content="width=device-width, initial-scale=1.0")])
 
 server = app.server  # needed for Heroku to connect to
-
 
 
 app.layout = dbc.Container([
@@ -165,4 +165,3 @@ def highest_lowest_value(json_df, ohlc):
 
 if __name__ == "__main__":
     app.run_server(debug=True)
-    

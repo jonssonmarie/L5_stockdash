@@ -6,3 +6,4 @@ def filter_time(df, days = 0):
     start_day = last_day-relativedelta(days = days)
     df = df.sort_index().loc[start_day:last_day]
     return df 
+    
