@@ -1,11 +1,13 @@
 import pandas as pd
 from dash import dcc, html
 import dash
-from load_data import StockDataLocal
+import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
 import plotly_express as px
+
 from time_filtering import filter_time
-import dash_bootstrap_components as dbc
+from load_data import StockDataLocal
+
 
 stock_data_object = StockDataLocal()
 
