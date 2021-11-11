@@ -1,5 +1,4 @@
 from dateutil.relativedelta import relativedelta
-from datetime import datetime
 
 def filter_time(df, days = 0):
     last_day = df.index[0].date()
